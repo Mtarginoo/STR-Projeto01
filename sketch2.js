@@ -55,11 +55,6 @@ function showCircle(circle){
         ellipse(circle.posicaoX, circle.posicaoY, 30);
     }
 }
-
-function gameStarted(){
-    sorteio();
-    showCircle();       
- }
            
 function setup() {
 	podeApertar = false;
@@ -85,20 +80,23 @@ function draw() {
 		if (fezSorteio == false) {
 			circleShown = sorteio();
 			fezSorteio = true;
+			console.log("aqui no sorteio");
 		}
 		alive = true;
-        if (alive == true && fezEspera == true) {
+		if (alive == true && fezEspera == true) {
 			showCircle(circleShown);
+			console.log("aqui no mostra circulo(fez espera?): ", fezEspera);
 			podeApertar = true;
 			if(primeiraMedida){
 				inicio = new Date();
 				i = inicio.getTime();
 				primeiraMedida = false;
-				console.log("(i): ", i);
 			}
 		}
+		console.log("fez espera?: ",fezEspera);
 		if (fezEspera == false){
 			setTimeout(function(){
+				console.log("aqui no timer (fezEspera): ", fezEspera);
 				fezEspera = true;
 			}, circleShown.tempo*1000);
 		}
@@ -113,13 +111,13 @@ function draw() {
 			if(keyIsDown(UP_ARROW)){
 				fim = new Date();
 				f = fim.getTime();
-				dif = f - i;
-				console.log("(f): ", f);
-				console.log("(i): ", i);
-				console.log("f-i: ", f-i);
-				//alert(dif);
+				console.log("dif: ", f-i);
+				console.log("Apertei");
+				fezSorteio = false;
+				fezEspera = false;
+				primeiraMedida = true;
+				podeApertar = false;
 			}
-        }
- 
-    }
+		}
+	}	
 } 

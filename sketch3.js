@@ -80,7 +80,27 @@ function draw() {
 	if (countMenu == 0) {
 		initialScreen();	
 	} else if (fimDoJogo == true) {
-		alert("Média: " + media);
+		//alert("Média: " + media + "ms");
+		textSize(50);
+		fill(255,255,255);
+		text("Média: " + media.toFixed(2) +"ms", 150, 100);
+		text("Score: " + pontos, 150, 200);
+		text("Pressione Enter para continuar", 150, 300);
+		if(keyIsDown(13)){
+			countMenu = 0;
+			fimDoJogo = false;
+			pontos = 0;
+			countBolas = 0;
+			clicou = false;
+			pegarTempo1 = false;
+			pegarTempoClique = false;
+			podeApertar = false;
+			media = false;
+			fezSorteio = false;
+			alive = false;
+			acertou = false;
+		}
+		
 	} else {
 		textSize(32);
 		fill(255,255,255);
