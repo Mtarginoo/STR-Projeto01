@@ -51,10 +51,14 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../gerenciador_de_processos/main.cpp \
-		../gerenciador_de_processos/mainwindow.cpp moc_mainwindow.cpp
+		../gerenciador_de_processos/mainwindow.cpp \
+		../gerenciador_de_processos/janelasudo.cpp moc_mainwindow.cpp \
+		moc_janelasudo.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
-		moc_mainwindow.o
+		janelasudo.o \
+		moc_mainwindow.o \
+		moc_janelasudo.o
 DIST          = /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/common/unix.conf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/common/linux.conf \
@@ -224,6 +228,7 @@ DIST          = /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/spec_pre
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/spec_post.prf \
+		../gerenciador_de_processos/.qmake.stash \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -243,8 +248,10 @@ DIST          = /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/spec_pre
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/exceptions.prf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/yacc.prf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/lex.prf \
-		../gerenciador_de_processos/gerenciador_de_processos.pro ../gerenciador_de_processos/mainwindow.h ../gerenciador_de_processos/main.cpp \
-		../gerenciador_de_processos/mainwindow.cpp
+		../gerenciador_de_processos/gerenciador_de_processos.pro ../gerenciador_de_processos/mainwindow.h \
+		../gerenciador_de_processos/janelasudo.h ../gerenciador_de_processos/main.cpp \
+		../gerenciador_de_processos/mainwindow.cpp \
+		../gerenciador_de_processos/janelasudo.cpp
 QMAKE_TARGET  = gerenciador_de_processos
 DESTDIR       = 
 TARGET        = gerenciador_de_processos
@@ -253,7 +260,7 @@ TARGET        = gerenciador_de_processos
 first: all
 ####### Build rules
 
-$(TARGET): ui_mainwindow.h $(OBJECTS)  
+$(TARGET): ui_mainwindow.h ui_janelasudo.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../gerenciador_de_processos/gerenciador_de_processos.pro /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++/qmake.conf /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/spec_pre.prf \
@@ -425,6 +432,7 @@ Makefile: ../gerenciador_de_processos/gerenciador_de_processos.pro /home/mtargin
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -618,6 +626,7 @@ Makefile: ../gerenciador_de_processos/gerenciador_de_processos.pro /home/mtargin
 /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/qt_config.prf:
 /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/toolchain.prf:
 /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/default_pre.prf:
@@ -656,9 +665,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../gerenciador_de_processos/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../gerenciador_de_processos/main.cpp ../gerenciador_de_processos/mainwindow.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../gerenciador_de_processos/mainwindow.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../gerenciador_de_processos/mainwindow.h ../gerenciador_de_processos/janelasudo.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../gerenciador_de_processos/main.cpp ../gerenciador_de_processos/mainwindow.cpp ../gerenciador_de_processos/janelasudo.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../gerenciador_de_processos/mainwindow.ui ../gerenciador_de_processos/janelasudo.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -690,9 +699,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/data/dummy.cpp
 	g++ -pipe -g -Wall -W -dM -E -o moc_predefs.h /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_janelasudo.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_janelasudo.cpp
 moc_mainwindow.cpp: /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMainWindow \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qmainwindow.h \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -804,16 +813,129 @@ moc_mainwindow.cpp: /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMa
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/bin/moc
 	/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++ -I'/home/mtarginoo/UFRN/Oitavo Semestre/STR/Projetos/Projetos_STR/Projeto02_Unidade01/gerenciador_de_processos' -I/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include -I/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets -I/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui -I/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../gerenciador_de_processos/mainwindow.h -o moc_mainwindow.cpp
 
+moc_janelasudo.cpp: /home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QDialog \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdialog.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtguiglobal.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qglobal.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qconfig.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qtcore-config.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qsysinfo.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qlogging.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qflags.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qatomic.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qmutex.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qnumeric.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qversiontagging.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtgui-config.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qwidget.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qnamespace.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qobject.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstring.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qchar.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qbytearray.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qrefcount.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qarraydata.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringliteral.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringview.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qlist.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qalgorithms.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qiterator.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qpair.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringlist.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qregexp.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcoreevent.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qmetatype.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qobject_impl.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qmargins.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qrect.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qsize.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qpoint.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpalette.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qcolor.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qrgb.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qrgba64.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qbrush.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qvector.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qmatrix.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpolygon.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qregion.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qdatastream.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qiodevice.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qline.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtransform.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpainterpath.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qimage.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpixelformat.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpixmap.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qshareddata.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qhash.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qfont.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qfontinfo.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qcursor.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qkeysequence.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qevent.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qvariant.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qmap.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qdebug.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qtextstream.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qlocale.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qset.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qurl.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qurlquery.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qfile.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qfiledevice.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qvector2d.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtouchdevice.h \
+		../gerenciador_de_processos/janelasudo.h \
+		moc_predefs.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/bin/moc
+	/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++ -I'/home/mtarginoo/UFRN/Oitavo Semestre/STR/Projetos/Projetos_STR/Projeto02_Unidade01/gerenciador_de_processos' -I/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include -I/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets -I/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui -I/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../gerenciador_de_processos/janelasudo.h -o moc_janelasudo.cpp
+
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h
+compiler_uic_make_all: ui_mainwindow.h ui_janelasudo.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h
+	-$(DEL_FILE) ui_mainwindow.h ui_janelasudo.h
 ui_mainwindow.h: ../gerenciador_de_processos/mainwindow.ui \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/bin/uic
 	/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/bin/uic ../gerenciador_de_processos/mainwindow.ui -o ui_mainwindow.h
+
+ui_janelasudo.h: ../gerenciador_de_processos/janelasudo.ui \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/bin/uic
+	/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/bin/uic ../gerenciador_de_processos/janelasudo.ui -o ui_janelasudo.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -1048,11 +1170,183 @@ mainwindow.o: ../gerenciador_de_processos/mainwindow.cpp ../gerenciador_de_proce
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtouchdevice.h \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qicon.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVariant \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QApplication \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QComboBox \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qcombobox.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qvalidator.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qregularexpression.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qslider.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qstyle.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qframe.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QHeaderView \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QLabel \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlabel.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QLineEdit \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextcursor.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextformat.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpen.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextoption.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMenuBar \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qmenubar.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qmenu.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qaction.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QPushButton \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QRadioButton \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qradiobutton.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QSpinBox \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qspinbox.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QSplitter \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qsplitter.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QStatusBar \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qstatusbar.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QTableView \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtableview.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QToolBar \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtoolbar.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QWidget \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMessageBox \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qmessagebox.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdialog.h \
+		../gerenciador_de_processos/janelasudo.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QDialog
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../gerenciador_de_processos/mainwindow.cpp
+
+janelasudo.o: ../gerenciador_de_processos/janelasudo.cpp ../gerenciador_de_processos/janelasudo.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QDialog \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdialog.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtguiglobal.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qglobal.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qconfig.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qtcore-config.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qsysinfo.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qlogging.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qflags.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qatomic.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qmutex.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qnumeric.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qversiontagging.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtgui-config.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qwidget.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qnamespace.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qobject.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstring.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qchar.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qbytearray.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qrefcount.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qarraydata.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringliteral.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringview.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qlist.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qalgorithms.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qiterator.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qpair.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringlist.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qregexp.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcoreevent.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qmetatype.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qobject_impl.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qmargins.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qrect.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qsize.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qpoint.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpalette.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qcolor.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qrgb.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qrgba64.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qbrush.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qvector.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qmatrix.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpolygon.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qregion.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qdatastream.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qiodevice.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qline.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtransform.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpainterpath.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qimage.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpixelformat.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpixmap.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qshareddata.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qhash.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qfont.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qfontinfo.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qcursor.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qkeysequence.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qevent.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qvariant.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qmap.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qdebug.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qtextstream.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qlocale.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qset.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qurl.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qurlquery.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qfile.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qfiledevice.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qvector2d.h \
+		/home/mtarginoo/Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtouchdevice.h \
+		ui_janelasudo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o janelasudo.o ../gerenciador_de_processos/janelasudo.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
+
+moc_janelasudo.o: moc_janelasudo.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_janelasudo.o moc_janelasudo.cpp
 
 ####### Install
 

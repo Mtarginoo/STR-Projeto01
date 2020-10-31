@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <janelasudo.h>
 
 namespace Ui {
 class MainWindow;
@@ -24,8 +25,13 @@ private slots:
 
     void on_btn_alterar_cpu_clicked();
 
+    void on_btn_renice_clicked();
+
+    void on_rb_root_clicked();
+
 private:
     Ui::MainWindow *ui;
+    JanelaSudo *telaSudo;
 };
 
 #endif // MAINWINDOW_H

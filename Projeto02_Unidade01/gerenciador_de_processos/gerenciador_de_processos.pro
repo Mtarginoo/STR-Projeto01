@@ -25,10 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    janelasudo.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    janelasudo.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    janelasudo.ui

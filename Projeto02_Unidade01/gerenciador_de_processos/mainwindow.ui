@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>916</width>
-    <height>522</height>
+    <width>922</width>
+    <height>552</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -76,19 +76,6 @@
      <string>Continuar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_renice">
-    <property name="geometry">
-     <rect>
-      <x>820</x>
-      <y>40</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Renice</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
@@ -107,35 +94,12 @@
      <rect>
       <x>60</x>
       <y>40</y>
-      <width>471</width>
+      <width>451</width>
       <height>25</height>
      </rect>
     </property>
    </widget>
-   <widget class="QColumnView" name="columnView">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>881</width>
-      <height>361</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_alterar_cpu">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>40</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Alterar</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QRadioButton" name="rb_root">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -148,38 +112,98 @@
      <string>Root</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>111</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>371</y>
+      <width>891</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="saida">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>130</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
    <widget class="QSplitter" name="splitter">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>40</y>
-      <width>73</width>
-      <height>26</height>
+      <width>199</width>
+      <height>25</height>
      </rect>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>CPU:</string>
+    <widget class="QSplitter" name="splitter_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
-    </widget>
-    <widget class="QSpinBox" name="box_num_cpu">
-     <property name="minimum">
-      <number>1</number>
-     </property>
-     <property name="maximum">
-      <number>8</number>
-     </property>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>CPU:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_cpu">
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="btn_alterar_cpu">
+      <property name="text">
+       <string>Alterar</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QSplitter" name="splitter_2">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>730</x>
       <y>40</y>
-      <width>90</width>
+      <width>183</width>
       <height>26</height>
      </rect>
     </property>
@@ -191,12 +215,17 @@
       <string>Renice:</string>
      </property>
     </widget>
-    <widget class="QSpinBox" name="box_renice">
+    <widget class="QSpinBox" name="spinBox_renice">
      <property name="minimum">
-      <number>1</number>
+      <number>-20</number>
      </property>
      <property name="maximum">
-      <number>8</number>
+      <number>19</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_renice">
+     <property name="text">
+      <string>Renice</string>
      </property>
     </widget>
    </widget>
@@ -206,7 +235,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>916</width>
+     <width>922</width>
      <height>22</height>
     </rect>
    </property>
