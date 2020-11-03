@@ -1,0 +1,252 @@
+USER         PID STAT PRI  NI PSR %CPU %MEM COMMAND
+mtargin+    2502 Sl+   19   0   0  9.6  1.7 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+mtargin+    4447 Sl    19   0   0  6.5  2.8 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=37 --no-v8-untrusted-code-mitigations --shared-files
+mtargin+    2680 Ssl   19   0   3  6.3  3.6 /usr/bin/gnome-shell
+mtargin+   13243 Sl    19   0   0  5.1  0.9 /home/mtarginoo/UFRN/Oitavo Semestre/STR/Projetos/Projetos_STR/Projeto02_Unidade01/build-gerenciador_de_processos-Desktop_Qt_5_11_1_GCC_64bit-Debug/gerenciador_de_processos
+mtargin+    3519 Sl    19   0   3  4.8  2.1 /opt/google/chrome/chrome --type=gpu-process --field-trial-handle=1282678852399140984,10751081818211388412,131072 --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --shared-files
+mtargin+    3455 SLl   19   0   0  4.3  4.1 /opt/google/chrome/chrome
+mtargin+    5136 Sl    19   0   1  3.2  1.4 gnome-control-center
+mtargin+    5259 Sl    19   0   3  2.1  1.8 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=72 --no-v8-untrusted-code-mitigations --shared-files
+mtargin+    4002 Sl    19   0   1  1.8  4.0 /home/mtarginoo/Qt5.11.1/Tools/QtCreator/bin/qtcreator
+mtargin+    2442 SNsl   0   -   0  1.7  0.6 /usr/libexec/tracker-miner-fs
+mtargin+   12305 Sl    19   0   1  1.7  1.7 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=152 --no-v8-untrusted-code-mitigations --shared-files
+mtargin+    2440 S<sl  30 -11   2  1.6  0.2 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+mtargin+    4134 S+    19   0   3  1.6  0.0 htop
+mtargin+    4118 Ssl   19   0   1  0.9  0.7 /usr/libexec/gnome-terminal-server
+mysql       1576 Ssl   19   0   2  0.8  4.7 /usr/sbin/mysqld
+root         203 I     19   0   3  0.7  0.0 [kworker/u8:4-phy0]
+mtargin+    5652 Sl    19   0   1  0.7  2.9 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=97 --no-v8-untrusted-code-mitigations --shared-files
+mtargin+    5694 Sl    19   0   1  0.6  2.6 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=100 --no-v8-untrusted-code-mitigations --shared-files
+root        5750 I     19   0   1  0.6  0.0 [kworker/u8:2-phy0]
+root       11493 I     19   0   0  0.6  0.0 [kworker/u8:3-i915]
+mtargin+   12591 Sl    19   0   1  0.6  1.1 /usr/bin/gedit --gapplication-service
+root        5068 I     19   0   0  0.5  0.0 [kworker/u8:5-i915]
+root       10342 I     19   0   0  0.5  0.0 [kworker/u8:1-events_unbound]
+mtargin+    2438 SLsl  19   0   1  0.4  2.4 /home/mtarginoo/.local/share/kite/current/kited --system-boot
+mtargin+    3637 Sl    19   0   3  0.4  2.2 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --extension-process --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=6 --no-v8-untrusted-code-mitigations --shared-files
+mtargin+    3870 Sl    19   0   1  0.4  0.8 /usr/bin/python3 /usr/bin/blueman-manager
+root         922 Ssl   19   0   2  0.3  0.2 /usr/sbin/NetworkManager --no-daemon
+mtargin+    2930 SLl   19   0   2  0.3  1.7 /usr/share/skypeforlinux/skypeforlinux --executed-from=/home/mtarginoo --pid=2854
+mtargin+    3267 Sl    19   0   3  0.3  2.6 /usr/share/skypeforlinux/skypeforlinux --type=renderer --autoplay-policy=no-user-gesture-required --disable-background-timer-throttling --ms-disable-indexeddb-transaction-timeout --field-trial-handle=16295285502501700876,15844528190393594805,131072 --disable-features=PictureInPicture,SpareRendererForSitePerProcess --lang=pt-BR --app-path=/usr/share/skypeforlinux/resources/app.asar --webview-tag --no-sandbox --no-zygote --native-window-open --preload=/usr/share/skypeforlinux/resources/app.asar/Preload.js --disable-remote-module --background-color=#fff --node-integration-in-subframes --enable-websql --enable-spellcheck --electron-shared-settings=eyJjci5jb21wYW55IjoiRWxlY3Ryb24iLCJjci5kdW1wcyI6IiIsImNyLmVuYWJsZWQiOmZhbHNlLCJjci5wcm9kdWN0IjoiRWxlY3Ryb24iLCJjci5zZXNzaW9uIjoiIiwiY3IudXJsIjoiIiwiY3IudmVyc2lvbiI6IiJ9 --num-raster-threads=2 --enable-main-frame-before-activation --service-request-channel-token=564552625907363360 --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101 --skype-process-type=Main --skype-window-id=__MAIN_ROOT_VIEW_ID__
+mtargin+    3524 SLl   19   0   1  0.3  1.1 /opt/google/chrome/chrome --type=utility --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --service-sandbox-type=network --disable-webrtc-apm-in-audio-service --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --shared-files
+mtargin+    3571 Sl    19   0   3  0.3  1.9 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --extension-process --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=4 --no-v8-untrusted-code-mitigations --shared-files
+mtargin+    3630 Sl    19   0   1  0.3  2.0 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --extension-process --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files
+mtargin+    3699 Sl    19   0   1  0.3  1.7 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=14 --no-v8-untrusted-code-mitigations --shared-files
+mtargin+    4919 Sl    19   0   0  0.3  1.9 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=65 --no-v8-untrusted-code-mitigations --shared-files
+mtargin+    5717 Sl    19   0   0  0.3  1.7 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=101 --no-v8-untrusted-code-mitigations --shared-files
+message+     921 Ss    19   0   2  0.2  0.0 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root       12257 I     19   0   2  0.2  0.0 [kworker/2:3-events]
+root       13197 I     19   0   2  0.2  0.0 [kworker/2:0-events]
+root           1 Ss    19   0   3  0.1  0.1 /sbin/init splash
+root          11 I     19   0   3  0.1  0.0 [rcu_sched]
+mtargin+    2707 Sl    19   0   3  0.1  0.1 ibus-daemon --panel disable --xim
+mtargin+    3248 Sl    19   0   2  0.1  0.8 /usr/share/skypeforlinux/skypeforlinux --type=utility --field-trial-handle=16295285502501700876,15844528190393594805,131072 --disable-features=PictureInPicture,SpareRendererForSitePerProcess --lang=pt-BR --service-sandbox-type=network --service-request-channel-token=5746378473529941802 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+mtargin+    4233 Sl    19   0   0  0.1  0.9 /usr/bin/nautilus --gapplication-service
+mtargin+    4506 Sl    19   0   1  0.1  0.7 /opt/google/chrome/chrome --type=utility --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --service-sandbox-type=audio --disable-webrtc-apm-in-audio-service --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --shared-files
+root           2 S     19   0   3  0.0  0.0 [kthreadd]
+root           3 I<    39 -20   0  0.0  0.0 [rcu_gp]
+root           4 I<    39 -20   0  0.0  0.0 [rcu_par_gp]
+root           6 I<    39 -20   0  0.0  0.0 [kworker/0:0H-kblockd]
+root           9 I<    39 -20   0  0.0  0.0 [mm_percpu_wq]
+root          10 S     19   0   0  0.0  0.0 [ksoftirqd/0]
+root          12 S    139   -   0  0.0  0.0 [migration/0]
+root          13 S     90   -   0  0.0  0.0 [idle_inject/0]
+root          14 S     19   0   0  0.0  0.0 [cpuhp/0]
+root          15 S     19   0   1  0.0  0.0 [cpuhp/1]
+root          16 S     90   -   1  0.0  0.0 [idle_inject/1]
+root          17 S    139   -   1  0.0  0.0 [migration/1]
+root          18 S     19   0   1  0.0  0.0 [ksoftirqd/1]
+root          20 I<    39 -20   1  0.0  0.0 [kworker/1:0H-kblockd]
+root          21 S     19   0   2  0.0  0.0 [cpuhp/2]
+root          22 S     90   -   2  0.0  0.0 [idle_inject/2]
+root          23 S    139   -   2  0.0  0.0 [migration/2]
+root          24 S     19   0   2  0.0  0.0 [ksoftirqd/2]
+root          26 I<    39 -20   2  0.0  0.0 [kworker/2:0H-kblockd]
+root          27 S     19   0   3  0.0  0.0 [cpuhp/3]
+root          28 S     90   -   3  0.0  0.0 [idle_inject/3]
+root          29 S    139   -   3  0.0  0.0 [migration/3]
+root          30 S     19   0   3  0.0  0.0 [ksoftirqd/3]
+root          32 I<    39 -20   3  0.0  0.0 [kworker/3:0H-kblockd]
+root          33 S     19   0   1  0.0  0.0 [kdevtmpfs]
+root          34 I<    39 -20   1  0.0  0.0 [netns]
+root          35 S     19   0   3  0.0  0.0 [rcu_tasks_kthre]
+root          36 S     19   0   3  0.0  0.0 [kauditd]
+root          37 S     19   0   3  0.0  0.0 [khungtaskd]
+root          38 S     19   0   3  0.0  0.0 [oom_reaper]
+root          39 I<    39 -20   3  0.0  0.0 [writeback]
+root          40 S     19   0   1  0.0  0.0 [kcompactd0]
+root          41 SN    14   5   1  0.0  0.0 [ksmd]
+root          42 SN     0  19   2  0.0  0.0 [khugepaged]
+root          89 I<    39 -20   1  0.0  0.0 [kintegrityd]
+root          90 I<    39 -20   3  0.0  0.0 [kblockd]
+root          91 I<    39 -20   2  0.0  0.0 [blkcg_punt_bio]
+root          93 I<    39 -20   2  0.0  0.0 [tpm_dev_wq]
+root          94 I<    39 -20   3  0.0  0.0 [ata_sff]
+root          96 I<    39 -20   0  0.0  0.0 [md]
+root          97 I<    39 -20   1  0.0  0.0 [edac-poller]
+root          98 I<    39 -20   3  0.0  0.0 [devfreq_wq]
+root         100 S    139   -   1  0.0  0.0 [watchdogd]
+root         102 S     19   0   0  0.0  0.0 [kswapd0]
+root         103 S     19   0   2  0.0  0.0 [ecryptfs-kthrea]
+root         105 I<    39 -20   2  0.0  0.0 [kthrotld]
+root         107 I<    39 -20   1  0.0  0.0 [acpi_thermal_pm]
+root         108 I<    39 -20   3  0.0  0.0 [vfio-irqfd-clea]
+root         111 I<    39 -20   0  0.0  0.0 [ipv6_addrconf]
+root         120 I<    39 -20   1  0.0  0.0 [kstrp]
+root         123 I<    39 -20   3  0.0  0.0 [kworker/u9:0-hci0]
+root         138 I<    39 -20   3  0.0  0.0 [charger_manager]
+root         188 S     90   -   2  0.0  0.0 [irq/30-DLLA6AE:]
+root         194 S     19   0   2  0.0  0.0 [scsi_eh_0]
+root         195 I<    39 -20   3  0.0  0.0 [scsi_tmf_0]
+root         196 S     19   0   3  0.0  0.0 [scsi_eh_1]
+root         197 I<    39 -20   0  0.0  0.0 [scsi_tmf_1]
+root         198 S     19   0   3  0.0  0.0 [scsi_eh_2]
+root         199 I<    39 -20   2  0.0  0.0 [scsi_tmf_2]
+root         200 S     19   0   2  0.0  0.0 [scsi_eh_3]
+root         201 I<    39 -20   3  0.0  0.0 [scsi_tmf_3]
+root         210 I<    39 -20   0  0.0  0.0 [kworker/0:1H-events_highpri]
+root         211 I<    39 -20   1  0.0  0.0 [kworker/1:1H-events_highpri]
+root         242 S     19   0   2  0.0  0.0 [jbd2/sda7-8]
+root         243 I<    39 -20   2  0.0  0.0 [ext4-rsv-conver]
+root         245 I<    39 -20   2  0.0  0.0 [kworker/2:1H-events_highpri]
+root         283 S<s   20  -1   1  0.0  0.4 /lib/systemd/systemd-journald
+root         327 S<    39 -20   3  0.0  0.0 [loop0]
+root         328 S<    39 -20   0  0.0  0.0 [loop1]
+root         329 S<    39 -20   0  0.0  0.0 [loop2]
+root         330 S<    39 -20   0  0.0  0.0 [loop3]
+root         331 S<    39 -20   0  0.0  0.0 [loop4]
+root         332 S<    39 -20   0  0.0  0.0 [loop5]
+root         336 S<    39 -20   0  0.0  0.0 [loop6]
+root         337 S<    39 -20   0  0.0  0.0 [loop7]
+root         338 S<    39 -20   2  0.0  0.0 [loop8]
+root         339 S<    39 -20   0  0.0  0.0 [loop9]
+root         342 Ss    19   0   2  0.0  0.1 /lib/systemd/systemd-udevd
+root         343 S<    39 -20   1  0.0  0.0 [loop10]
+root         344 S<    39 -20   1  0.0  0.0 [loop11]
+root         395 S     90   -   2  0.0  0.0 [irq/50-mei_me]
+root         407 I<    39 -20   2  0.0  0.0 [cfg80211]
+root         409 I<    39 -20   0  0.0  0.0 [nvkm-disp]
+root         427 I<    39 -20   1  0.0  0.0 [kmemstick]
+root         455 I<    39 -20   1  0.0  0.0 [cryptd]
+root         472 I<    39 -20   2  0.0  0.0 [ttm_swap]
+root         781 I<    39 -20   1  0.0  0.0 [kworker/u9:1-hci0]
+systemd+     905 Ss    19   0   3  0.0  0.1 /lib/systemd/systemd-resolved
+systemd+     906 Ssl   19   0   0  0.0  0.0 /lib/systemd/systemd-timesyncd
+root         911 Ssl   19   0   2  0.0  0.1 /usr/lib/accountsservice/accounts-daemon
+root         912 Ss    19   0   0  0.0  0.0 /usr/sbin/acpid
+avahi        915 Ss    19   0   3  0.0  0.0 avahi-daemon: running [mtarginoo-Inspiron-5458.local]
+root         917 Ss    19   0   1  0.0  0.0 /usr/lib/bluetooth/bluetoothd
+root         919 Ss    19   0   1  0.0  0.0 /usr/sbin/cron -f
+root         920 Ss    19   0   2  0.0  0.1 /usr/sbin/cupsd -l
+root         932 Ssl   19   0   0  0.0  0.0 /usr/sbin/irqbalance --foreground
+root         934 Ssl   19   0   0  0.0  0.1 /usr/lib/policykit-1/polkitd --no-debug
+syslog       936 Ssl   19   0   0  0.0  0.0 /usr/sbin/rsyslogd -n -iNONE
+root         950 Ssl   19   0   2  0.0  0.3 /usr/lib/snapd/snapd
+root         951 Ssl   19   0   3  0.0  0.0 /usr/libexec/switcheroo-control
+root         952 Ss    19   0   2  0.0  0.1 /lib/systemd/systemd-logind
+root         953 Ssl   19   0   3  0.0  0.1 /usr/sbin/thermald --no-daemon --dbus-enable
+root         954 Ssl   19   0   0  0.0  0.1 /usr/lib/udisks2/udisksd
+root         955 Ss    19   0   1  0.0  0.1 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        966 S     19   0   2  0.0  0.0 avahi-daemon: chroot helper
+root        1046 Ssl   19   0   3  0.0  0.1 /usr/sbin/cups-browsed
+colord      1049 Ssl   19   0   3  0.0  0.2 /usr/libexec/colord
+root        1054 Ssl   19   0   1  0.0  0.2 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root        1060 Ssl   19   0   1  0.0  0.5 /usr/bin/containerd
+root        1074 Ssl   19   0   2  0.0  0.1 /usr/sbin/ModemManager --filter-policy=strict
+root        1083 Ssl   19   0   0  0.0  0.1 /usr/sbin/gdm3
+root        1139 S     19   0   3  0.0  0.0 [ath9k-hwrng]
+lp          1147 S     19   0   3  0.0  0.0 /usr/lib/cups/notifier/dbus dbus://
+root        1526 Ssl   19   0   2  0.0  1.0 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+whoopsie    1550 Ssl   19   0   3  0.0  0.1 /usr/bin/whoopsie -f
+kernoops    1565 Ss    19   0   2  0.0  0.0 /usr/sbin/kerneloops --test
+kernoops    1567 Ss    19   0   0  0.0  0.0 /usr/sbin/kerneloops
+rtkit       1591 SNsl  18   1   3  0.0  0.0 /usr/libexec/rtkit-daemon
+root        1675 Ssl   19   0   3  0.0  0.1 /usr/lib/upower/upowerd
+root        1751 S     19   0   3  0.0  0.0 bpfilter_umh
+root        2399 Sl    19   0   3  0.0  0.1 gdm-session-worker [pam/gdm-password]
+mtargin+    2425 Ss    19   0   3  0.0  0.1 /lib/systemd/systemd --user
+mtargin+    2428 S     19   0   1  0.0  0.0 (sd-pam)
+mtargin+    2445 Ss    19   0   0  0.0  0.0 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+mtargin+    2461 Ssl   19   0   1  0.0  0.0 /usr/libexec/gvfsd
+mtargin+    2466 Sl    19   0   1  0.0  0.0 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+mtargin+    2471 Ssl   19   0   0  0.0  0.1 /usr/libexec/gvfs-udisks2-volume-monitor
+mtargin+    2480 SLl   19   0   3  0.0  0.1 /usr/bin/gnome-keyring-daemon --daemonize --login
+root        2488 S<    29 -10   3  0.0  0.0 [krfcommd]
+mtargin+    2500 Ssl+  19   0   1  0.0  0.0 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+mtargin+    2537 Sl+   19   0   1  0.0  0.1 /usr/libexec/gnome-session-binary --systemd --systemd --session=ubuntu
+mtargin+    2613 Ss    19   0   1  0.0  0.0 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+mtargin+    2627 Ssl   19   0   0  0.0  0.0 /usr/libexec/at-spi-bus-launcher
+mtargin+    2632 S     19   0   3  0.0  0.0 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+mtargin+    2644 Ssl   19   0   3  0.0  0.0 /usr/libexec/gnome-session-ctl --monitor
+mtargin+    2652 Ssl   19   0   2  0.0  0.2 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+mtargin+    2714 Sl    19   0   2  0.0  0.2 /usr/libexec/gnome-shell-calendar-server
+mtargin+    2716 Ssl   19   0   0  0.0  0.0 /usr/libexec/xdg-permission-store
+mtargin+    2721 Sl    19   0   0  0.0  0.0 /usr/libexec/ibus-dconf
+mtargin+    2722 Sl    19   0   2  0.0  0.3 /usr/libexec/ibus-extension-gtk3
+mtargin+    2744 Sl    19   0   0  0.0  0.3 /usr/libexec/ibus-x11 --kill-daemon
+mtargin+    2747 Sl    19   0   2  0.0  0.0 /usr/libexec/ibus-portal
+mtargin+    2754 Sl    19   0   3  0.0  0.0 /usr/libexec/at-spi2-registryd --use-gnome-session
+mtargin+    2760 Sl    19   0   0  0.0  0.0 /usr/libexec/dconf-service
+mtargin+    2778 Ssl   19   0   0  0.0  0.3 /usr/libexec/evolution-source-registry
+mtargin+    2783 Sl    19   0   2  0.0  0.3 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+mtargin+    2794 Ssl   19   0   2  0.0  0.0 /usr/libexec/gsd-a11y-settings
+mtargin+    2795 Ssl   19   0   0  0.0  0.3 /usr/libexec/gsd-color
+mtargin+    2796 Ssl   19   0   1  0.0  0.3 /usr/libexec/gsd-datetime
+mtargin+    2798 Ssl   19   0   2  0.0  0.1 /usr/libexec/gsd-housekeeping
+mtargin+    2801 Ssl   19   0   3  0.0  0.3 /usr/libexec/gsd-keyboard
+mtargin+    2803 Ssl   19   0   1  0.0  0.3 /usr/libexec/gsd-media-keys
+mtargin+    2805 Ssl   19   0   1  0.0  0.3 /usr/libexec/gsd-power
+mtargin+    2808 Ssl   19   0   2  0.0  0.1 /usr/libexec/gsd-print-notifications
+mtargin+    2811 Ssl   19   0   3  0.0  0.0 /usr/libexec/gsd-rfkill
+mtargin+    2814 Ssl   19   0   3  0.0  0.0 /usr/libexec/gsd-screensaver-proxy
+mtargin+    2815 Ssl   19   0   1  0.0  0.1 /usr/libexec/gsd-sharing
+mtargin+    2816 Ssl   19   0   3  0.0  0.1 /usr/libexec/gsd-smartcard
+mtargin+    2817 Ssl   19   0   3  0.0  0.1 /usr/libexec/gsd-sound
+mtargin+    2820 Ssl   19   0   3  0.0  0.0 /usr/libexec/gsd-usb-protection
+mtargin+    2822 Ssl   19   0   2  0.0  0.3 /usr/libexec/gsd-wacom
+mtargin+    2825 Ssl   19   0   3  0.0  0.1 /usr/libexec/gsd-wwan
+mtargin+    2827 Ssl   19   0   0  0.0  0.3 /usr/libexec/gsd-xsettings
+mtargin+    2855 Sl    19   0   2  0.0  0.0 /usr/libexec/gsd-disk-utility-notify
+mtargin+    2856 Sl    19   0   2  0.0  0.5 /usr/bin/python3 /usr/bin/blueman-applet
+mtargin+    2860 Sl    19   0   1  0.0  0.0 /usr/libexec/ibus-engine-simple
+mtargin+    2874 Sl    19   0   0  0.0  0.1 /usr/lib/x86_64-linux-gnu/indicator-messages/indicator-messages-service
+mtargin+    2875 Sl    19   0   0  0.0  0.1 /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0
+mtargin+    2882 Sl    19   0   1  0.0  0.6 /usr/libexec/evolution-data-server/evolution-alarm-notify
+mtargin+    2914 Sl    19   0   3  0.0  0.1 /usr/libexec/gsd-printer
+mtargin+    2985 Sl    19   0   0  0.0  0.4 /usr/libexec/goa-daemon
+mtargin+    2994 Ssl   19   0   0  0.0  0.3 /usr/libexec/evolution-calendar-factory
+mtargin+    3013 Ssl   19   0   2  0.0  0.3 /usr/libexec/evolution-addressbook-factory
+mtargin+    3023 Sl    19   0   3  0.0  0.1 /usr/libexec/goa-identity-service
+mtargin+    3067 Sl    19   0   1  0.0  0.5 /usr/bin/python3 /usr/bin/blueman-tray
+mtargin+    3088 Ss    19   0   2  0.0  0.0 /usr/lib/bluetooth/obexd
+mtargin+    3100 S     19   0   0  0.0  0.5 /usr/share/skypeforlinux/skypeforlinux --type=zygote
+mtargin+    3106 S     19   0   3  0.0  0.0 /usr/share/skypeforlinux/skypeforlinux --type=zygote
+mtargin+    3120 Sl    19   0   3  0.0  0.2 zeitgeist-datahub
+mtargin+    3129 Ssl   19   0   3  0.0  0.1 /usr/bin/zeitgeist-daemon
+mtargin+    3142 Ssl   19   0   2  0.0  0.2 /usr/lib/zeitgeist/zeitgeist-fts
+mtargin+    3239 Sl    19   0   0  0.0  1.2 /usr/share/skypeforlinux/skypeforlinux --type=gpu-process --field-trial-handle=16295285502501700876,15844528190393594805,131072 --disable-features=PictureInPicture,SpareRendererForSitePerProcess --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --service-request-channel-token=10312928438960844861
+mtargin+    3383 Ssl   19   0   0  0.0  0.1 /usr/libexec/gvfsd-metadata
+mtargin+    3403 Sl    19   0   2  0.0  0.3 update-notifier
+mtargin+    3461 S     19   0   2  0.0  0.0 cat
+mtargin+    3462 S     19   0   1  0.0  0.0 cat
+mtargin+    3491 S     19   0   1  0.0  0.7 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47,
+mtargin+    3494 S     19   0   1  0.0  0.0 /opt/google/chrome/nacl_helper
+mtargin+    3497 S     19   0   1  0.0  0.1 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47,
+root        3890 S<    34 -15   2  0.0  0.0 [khidpd_046db342]
+mtargin+    3926 Sl    19   0   2  0.0  0.6 /usr/bin/gnome-calendar --gapplication-service
+mtargin+    3927 SLl   19   0   3  0.0  0.5 /usr/bin/seahorse --gapplication-service
+mtargin+    4126 Ss    19   0   0  0.0  0.0 bash
+mtargin+    4167 Ss+   19   0   0  0.0  0.0 bash
+mtargin+    4274 Ss+   19   0   0  0.0  0.0 bash
+root        4585 I<    39 -20   3  0.0  0.0 [kworker/3:2H-events_highpri]
+root        6728 I     19   0   0  0.0  0.0 [kworker/0:0-events]
+root        8959 I     19   0   3  0.0  0.0 [kworker/3:0-events]
+root       12060 I     19   0   2  0.0  0.0 [kworker/2:1-events]
+root       12256 I     19   0   1  0.0  0.0 [kworker/1:3-events]
+root       12274 I     19   0   3  0.0  0.0 [kworker/3:4-events]
+root       12291 I     19   0   0  0.0  0.0 [kworker/0:1]
+root       12304 I     19   0   1  0.0  0.0 [kworker/1:4-events]
+mtargin+   12331 Sl    19   0   0  0.0  0.6 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1282678852399140984,10751081818211388412,131072 --lang=pt-BR --enable-crash-reporter=19dd851a-c40d-4aa0-a96a-049e02b0aa47, --enable-auto-reload --origin-trial-disabled-features=MeasureMemory --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=154 --no-v8-untrusted-code-mitigations --shared-files
+root       13228 I     19   0   0  0.0  0.0 [kworker/u8:0-i915]
+mtargin+   13363 S     19   0   3  0.0  0.0 sh -c ps -eo user,pid,stat,pri,ni,psr,%cpu,%mem,command --sort=-%cpu > proc4.txt
+mtargin+   13364 R     19   0   0  0.0  0.0 ps -eo user,pid,stat,pri,ni,psr,%cpu,%mem,command --sort=-%cpu

@@ -22,7 +22,7 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QSplitter>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableView>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -33,16 +33,7 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QLabel *label;
-    QLineEdit *txt_PID;
-    QPushButton *btn_matar;
-    QPushButton *btn_suspender;
-    QPushButton *btn_continuar;
-    QLabel *label_2;
-    QLineEdit *txt_PID_2;
     QRadioButton *rb_root;
-    QLabel *label_5;
-    QTableView *tableView;
-    QLabel *saida;
     QSplitter *splitter;
     QSplitter *splitter_3;
     QLabel *label_3;
@@ -52,6 +43,18 @@ public:
     QLabel *label_4;
     QSpinBox *spinBox_renice;
     QPushButton *btn_renice;
+    QTableWidget *tabela_processos;
+    QSplitter *splitter_5;
+    QLineEdit *txt_PID;
+    QPushButton *btn_matar;
+    QSplitter *splitter_6;
+    QPushButton *btn_suspender;
+    QPushButton *btn_continuar;
+    QSplitter *splitter_7;
+    QLabel *label_2;
+    QSplitter *splitter_4;
+    QLineEdit *txt_filtro;
+    QPushButton *btn_filtrar;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -60,45 +63,18 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(922, 552);
+        MainWindow->resize(940, 744);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(10, 10, 41, 21));
-        txt_PID = new QLineEdit(centralWidget);
-        txt_PID->setObjectName(QStringLiteral("txt_PID"));
-        txt_PID->setGeometry(QRect(50, 10, 461, 25));
-        btn_matar = new QPushButton(centralWidget);
-        btn_matar->setObjectName(QStringLiteral("btn_matar"));
-        btn_matar->setGeometry(QRect(520, 10, 80, 25));
-        btn_suspender = new QPushButton(centralWidget);
-        btn_suspender->setObjectName(QStringLiteral("btn_suspender"));
-        btn_suspender->setGeometry(QRect(610, 10, 89, 25));
-        btn_continuar = new QPushButton(centralWidget);
-        btn_continuar->setObjectName(QStringLiteral("btn_continuar"));
-        btn_continuar->setGeometry(QRect(710, 10, 89, 25));
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(10, 40, 41, 21));
-        txt_PID_2 = new QLineEdit(centralWidget);
-        txt_PID_2->setObjectName(QStringLiteral("txt_PID_2"));
-        txt_PID_2->setGeometry(QRect(60, 40, 451, 25));
         rb_root = new QRadioButton(centralWidget);
         rb_root->setObjectName(QStringLiteral("rb_root"));
-        rb_root->setGeometry(QRect(810, 10, 112, 23));
-        label_5 = new QLabel(centralWidget);
-        label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(20, 80, 111, 17));
-        tableView = new QTableView(centralWidget);
-        tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setGeometry(QRect(15, 371, 891, 111));
-        saida = new QLabel(centralWidget);
-        saida->setObjectName(QStringLiteral("saida"));
-        saida->setGeometry(QRect(370, 130, 67, 17));
+        rb_root->setGeometry(QRect(860, 0, 61, 23));
         splitter = new QSplitter(centralWidget);
         splitter->setObjectName(QStringLiteral("splitter"));
-        splitter->setGeometry(QRect(520, 40, 199, 25));
+        splitter->setGeometry(QRect(10, 50, 199, 25));
         splitter->setOrientation(Qt::Horizontal);
         splitter_3 = new QSplitter(splitter);
         splitter_3->setObjectName(QStringLiteral("splitter_3"));
@@ -119,7 +95,7 @@ public:
         splitter->addWidget(splitter_3);
         splitter_2 = new QSplitter(centralWidget);
         splitter_2->setObjectName(QStringLiteral("splitter_2"));
-        splitter_2->setGeometry(QRect(730, 40, 183, 26));
+        splitter_2->setGeometry(QRect(260, 50, 183, 26));
         splitter_2->setOrientation(Qt::Horizontal);
         label_4 = new QLabel(splitter_2);
         label_4->setObjectName(QStringLiteral("label_4"));
@@ -132,10 +108,70 @@ public:
         btn_renice = new QPushButton(splitter_2);
         btn_renice->setObjectName(QStringLiteral("btn_renice"));
         splitter_2->addWidget(btn_renice);
+        tabela_processos = new QTableWidget(centralWidget);
+        if (tabela_processos->columnCount() < 9)
+            tabela_processos->setColumnCount(9);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        tabela_processos->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        tabela_processos->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
+        tabela_processos->setHorizontalHeaderItem(2, __qtablewidgetitem2);
+        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
+        tabela_processos->setHorizontalHeaderItem(3, __qtablewidgetitem3);
+        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
+        tabela_processos->setHorizontalHeaderItem(4, __qtablewidgetitem4);
+        QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
+        tabela_processos->setHorizontalHeaderItem(5, __qtablewidgetitem5);
+        QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
+        tabela_processos->setHorizontalHeaderItem(6, __qtablewidgetitem6);
+        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
+        tabela_processos->setHorizontalHeaderItem(7, __qtablewidgetitem7);
+        QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
+        tabela_processos->setHorizontalHeaderItem(8, __qtablewidgetitem8);
+        tabela_processos->setObjectName(QStringLiteral("tabela_processos"));
+        tabela_processos->setGeometry(QRect(20, 90, 901, 591));
+        splitter_5 = new QSplitter(centralWidget);
+        splitter_5->setObjectName(QStringLiteral("splitter_5"));
+        splitter_5->setGeometry(QRect(50, 10, 222, 25));
+        splitter_5->setOrientation(Qt::Horizontal);
+        txt_PID = new QLineEdit(splitter_5);
+        txt_PID->setObjectName(QStringLiteral("txt_PID"));
+        splitter_5->addWidget(txt_PID);
+        btn_matar = new QPushButton(splitter_5);
+        btn_matar->setObjectName(QStringLiteral("btn_matar"));
+        splitter_5->addWidget(btn_matar);
+        splitter_6 = new QSplitter(centralWidget);
+        splitter_6->setObjectName(QStringLiteral("splitter_6"));
+        splitter_6->setGeometry(QRect(280, 10, 161, 25));
+        splitter_6->setOrientation(Qt::Horizontal);
+        btn_suspender = new QPushButton(splitter_6);
+        btn_suspender->setObjectName(QStringLiteral("btn_suspender"));
+        splitter_6->addWidget(btn_suspender);
+        btn_continuar = new QPushButton(splitter_6);
+        btn_continuar->setObjectName(QStringLiteral("btn_continuar"));
+        splitter_6->addWidget(btn_continuar);
+        splitter_7 = new QSplitter(centralWidget);
+        splitter_7->setObjectName(QStringLiteral("splitter_7"));
+        splitter_7->setGeometry(QRect(650, 30, 270, 25));
+        splitter_7->setOrientation(Qt::Horizontal);
+        label_2 = new QLabel(splitter_7);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        splitter_7->addWidget(label_2);
+        splitter_4 = new QSplitter(splitter_7);
+        splitter_4->setObjectName(QStringLiteral("splitter_4"));
+        splitter_4->setOrientation(Qt::Horizontal);
+        txt_filtro = new QLineEdit(splitter_4);
+        txt_filtro->setObjectName(QStringLiteral("txt_filtro"));
+        splitter_4->addWidget(txt_filtro);
+        btn_filtrar = new QPushButton(splitter_4);
+        btn_filtrar->setObjectName(QStringLiteral("btn_filtrar"));
+        splitter_4->addWidget(btn_filtrar);
+        splitter_7->addWidget(splitter_4);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 922, 22));
+        menuBar->setGeometry(QRect(0, 0, 940, 22));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -153,13 +189,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QApplication::translate("MainWindow", "PID: ", nullptr));
-        btn_matar->setText(QApplication::translate("MainWindow", "Matar", nullptr));
-        btn_suspender->setText(QApplication::translate("MainWindow", "Suspender", nullptr));
-        btn_continuar->setText(QApplication::translate("MainWindow", "Continuar", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "Filtro:  ", nullptr));
         rb_root->setText(QApplication::translate("MainWindow", "Root", nullptr));
-        label_5->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        saida->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "CPU:", nullptr));
         comboBox_cpu->setItemText(0, QApplication::translate("MainWindow", "1", nullptr));
         comboBox_cpu->setItemText(1, QApplication::translate("MainWindow", "2", nullptr));
@@ -169,6 +199,29 @@ public:
         btn_alterar_cpu->setText(QApplication::translate("MainWindow", "Alterar", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "Renice:", nullptr));
         btn_renice->setText(QApplication::translate("MainWindow", "Renice", nullptr));
+        QTableWidgetItem *___qtablewidgetitem = tabela_processos->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "User", nullptr));
+        QTableWidgetItem *___qtablewidgetitem1 = tabela_processos->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QApplication::translate("MainWindow", "PID", nullptr));
+        QTableWidgetItem *___qtablewidgetitem2 = tabela_processos->horizontalHeaderItem(2);
+        ___qtablewidgetitem2->setText(QApplication::translate("MainWindow", "Status", nullptr));
+        QTableWidgetItem *___qtablewidgetitem3 = tabela_processos->horizontalHeaderItem(3);
+        ___qtablewidgetitem3->setText(QApplication::translate("MainWindow", "Prioridade", nullptr));
+        QTableWidgetItem *___qtablewidgetitem4 = tabela_processos->horizontalHeaderItem(4);
+        ___qtablewidgetitem4->setText(QApplication::translate("MainWindow", "Nice", nullptr));
+        QTableWidgetItem *___qtablewidgetitem5 = tabela_processos->horizontalHeaderItem(5);
+        ___qtablewidgetitem5->setText(QApplication::translate("MainWindow", "CPU alocada", nullptr));
+        QTableWidgetItem *___qtablewidgetitem6 = tabela_processos->horizontalHeaderItem(6);
+        ___qtablewidgetitem6->setText(QApplication::translate("MainWindow", "Uso da CPU (%)", nullptr));
+        QTableWidgetItem *___qtablewidgetitem7 = tabela_processos->horizontalHeaderItem(7);
+        ___qtablewidgetitem7->setText(QApplication::translate("MainWindow", "Mem\303\263ria (%)", nullptr));
+        QTableWidgetItem *___qtablewidgetitem8 = tabela_processos->horizontalHeaderItem(8);
+        ___qtablewidgetitem8->setText(QApplication::translate("MainWindow", "Comando", nullptr));
+        btn_matar->setText(QApplication::translate("MainWindow", "Matar", nullptr));
+        btn_suspender->setText(QApplication::translate("MainWindow", "Suspender", nullptr));
+        btn_continuar->setText(QApplication::translate("MainWindow", "Continuar", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "Filtro:  ", nullptr));
+        btn_filtrar->setText(QApplication::translate("MainWindow", "Filtar", nullptr));
     } // retranslateUi
 
 };

@@ -29,6 +29,10 @@ private slots:
 
     void on_rb_root_clicked();
 
+    void mostra_tabela();
+
+    void on_btn_filtrar_clicked();
+
 private:
     Ui::MainWindow *ui;
     JanelaSudo *telaSudo;
